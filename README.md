@@ -1,5 +1,5 @@
 # THINGSanalysis
-Data and code to analyse the luminance and contrast of images in the [THINGS database](https://osf.io/jum2f/) of my 
+Data and code to analyse the luminance and contrast of images in the [THINGS database](https://osf.io/jum2f/) as in my 
 recent work available on [bioRXiv](https://www.biorxiv.org/content/10.1101/2021.07.08.451706v2).
 
 ## Table of Contents
@@ -16,9 +16,9 @@ recent work available on [bioRXiv](https://www.biorxiv.org/content/10.1101/2021.
     
     
 - Download [THINGS dataset](https://osf.io/jum2f/). 
-    - Extract the zip to this directory;
+    - Extract the dataset (zip file) to this directory (path_to/THINGSanalysis);
     - Rename the folder to 'THINGS'
-    - Extract the zip files in 'THINGS/Main/images/'. Password is available here [THINGS dataset](https://osf.io/jum2f/)
+    - Extract the zip files in 'THINGS/Main/' to 'THINGS/Main/images/'. Password is available here [THINGS dataset](https://osf.io/jum2f/)
 
 
 

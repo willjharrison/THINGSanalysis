@@ -105,10 +105,10 @@ for catLoop = 1:nCats
 end
 
 % save variables as csv file
-% imStats.oriEn = imStats.oriEn.' 
-% imStats.sfEn = imStats.sfEn.'
+imStats.oriEn = imStats.oriEn.';
+imStats.sfEn = imStats.sfEn.';
 THINGS_imstats = struct2table(imStats);
-mkdir('./output')
+% mkdir('./output')
 writetable(THINGS_imstats, './output/THINGS_imstats.csv');
 
 %% summarise main data

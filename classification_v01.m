@@ -83,27 +83,27 @@ halfProp = propCorrect(idx);
 p = propCorrect(:);
 concept = numberList(nCats,nCats);
 propForDgraph = table(concept, p);
-writetable(propForDgraph,'propForDgraph_revised_2.csv') 
+writetable(propForDgraph,'./output/propForDgraph_revised_2.csv') 
 
 % corrdinates for plotting
 [x,y] = ind2sub(nCats, 1:nCats^2);
 x = x';
 y = y';
 coords = table(x, y);
-writetable(coords, 'coords_revised_2.csv');
+writetable(coords, './output/coords_revised_2.csv');
 
 % save matrix as an image with colour bar
 bigMatrix = reshape(p,nCats,nCats);
 lumMatrix = abs(bigMatrix*2 - 1).^(1/3);
 colMatrix = round(bigMatrix)*pi - pi/2;
-imwrite(flipud(colouriseOris_withAmp(colMatrix,lumMatrix,100)),'colIm_revised_2.png');
+imwrite(flipud(colouriseOris_withAmp(colMatrix,lumMatrix,100)),'./output/colIm_revised_2.png');
 
 %% col bar
 colBar = round(0:.001*2:1);
 lumBar = (abs(linspace(0,1,length(colBar))*2 - 1)).^(1/3);
 
 colBarIm = colouriseOris_withAmp(kron(colBar*pi - pi/2,ones(50,1)), kron(lumBar,ones(50,1)),100);
-imwrite(colBarIm, 'colBarIm_revised_2.png');
+imwrite(colBarIm, './output/colBarIm_revised_2.png');
 
 %% zoom in on section of matrix
 % smaller section
@@ -113,21 +113,21 @@ smallP = propCorrect(w,w);
 smallP = smallP(:);
 smallConcept = min(w) - 1 + numberList(length(w), length(w));
 smallPropForDgraph = table(smallConcept, smallP);
-writetable(smallPropForDgraph,'smallPropForDgraph_revised_2.csv') 
+writetable(smallPropForDgraph,'./output/smallPropForDgraph_revised_2.csv') 
 
 smallMatrix = reshape(smallP,20,20);
 imwrite(flipud(colouriseOris_withAmp(...
     kron(round(smallMatrix)*pi - pi/2,ones(2)),...
     kron(abs(smallMatrix*2 - 1).^(1/3),ones(2)),...
-    100)),'smallMatrixIm_revised_2.png');
+    100)),'./output/smallMatrixIm_revised_2.png');
 
-load('/Users/uqwharr1/Dropbox/Documents/Experiments/QBI/SteeredFilterPlacement/THINGS/Variables/unique_id.mat')
+load('./THINGS/Variables/unique_id.mat')
 labels = string(unique_id(w));
 catNames = string(unique_id);
 
 %% which images are easiest/hardest to classify?
-load('/Users/uqwharr1/Dropbox/Documents/Experiments/QBI/SteeredFilterPlacement/THINGS/Variables/image_paths.mat')
-thingsDir = '/Users/uqwharr1/Dropbox/Documents/Experiments/QBI/SteeredFilterPlacement/THINGS/Main/';
+load('./THINGS/Variables/image_paths.mat')
+thingsDir = './THINGS/Main/';
 
 nBestWorst = 5; % arbitrary
 
@@ -153,4 +153,4 @@ ims = zeros(newImSize,newImSize,nBestWorst,2);
  end
 ims(ims(:)>1) = 1;
 ims(ims(:)<-1) = -1;
-imwrite(unpackIm(sqrt(ims/2 + .5),0,0),'bestWorstIms_revised.png')
+imwrite(unpackIm(sqrt(ims/2 + .5),0,0),'./output/bestWorstIms_revised.png')

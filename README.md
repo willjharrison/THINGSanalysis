@@ -1,6 +1,8 @@
 # THINGSanalysis
 Data and code to analyse the luminance and contrast of images in the [THINGS database](https://osf.io/jum2f/) as in my 
-recent work available on [bioRXiv](https://www.biorxiv.org/content/10.1101/2021.07.08.451706v2).
+recent work published in [Perception](https://journals.sagepub.com/eprint/9CPFR9QQ5JJPYDFEUABR/full) also available via  [bioRXiv](https://www.biorxiv.org/content/10.1101/2021.07.08.451706v2).
+
+**Harrison, W. J.** 2022. “Luminance and Contrast of Images in the THINGS Database:” Perception 51(4):244–62. doi: 10.1177/03010066221083397.
 
 ## Table of Contents
 * [Installation and requirements](#installation-and-requirements)
@@ -23,17 +25,23 @@ recent work available on [bioRXiv](https://www.biorxiv.org/content/10.1101/2021.
 
 
 ## Citation
-
-    @article{Harrison2021,
-        author = {Harrison, William J},
-        title = {Luminance and contrast of images in the THINGS database},
-        year = {2021},
-        doi = {10.1101/2021.07.08.451706},
-        publisher = {Cold Spring Harbor Laboratory},
-        eprint = {https://www.biorxiv.org/content/early/2021/10/24/2021.07.08.451706.full.pdf},
-        journal = {bioRxiv}
+    
+    @article{Harrison2022,
+        title = {Luminance and {Contrast} of {Images} in the {THINGS} {Database}:},
+        volume = {51},
+        copyright = {© The Author(s) 2022},
+        url = {https://journals.sagepub.com/eprint/9CPFR9QQ5JJPYDFEUABR/full},
+        doi = {10.1177/03010066221083397},
+        number = {4},
+        journal = {Perception},
+        author = {Harrison, William J.},
+        year = {2022},
+        note = {Publisher: SAGE PublicationsSage UK: London, England},
+        pages = {244--262},
+        
     }
+
 
 ## Contact
 
-Will Harrison <[w.harrison@psy.uq.edu.au](w.harrison@psy.uq.edu.au)>
+Will Harrison <[willjharri@gmail.com](willjharri@gmail.com)>
